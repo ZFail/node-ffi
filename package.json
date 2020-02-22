@@ -22,17 +22,19 @@
     "node": ">=0.10.0"
   },
   "main": "./lib/ffi",
+  "peerDependencies": {
+    "ref": "*",
+    "ref-struct": "*",
+    "ref-array": "*"
+  },
   "dependencies": {
     "bindings": "~1.5.0",
     "debug": "4",
-    "nan": "^2.13.2",
-    "ref": "lxe/ref#node-12",
-    "ref-struct": "lxe/ref-struct#node-12"
+    "nan": "^2.13.2"
   },
   "devDependencies": {
     "fs-extra": "^7.0.1",
-    "mocha": "*",
-    "ref-array": "lxe/ref-array#node-12"
+    "mocha": "*"
   },
   "scripts": {
     "test": "node-gyp rebuild --directory test && mocha -gc --reporter spec"
